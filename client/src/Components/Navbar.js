@@ -12,7 +12,8 @@ const Navbar = () => {
   const handlelogout=()=>{
     logout()
     .then(()=>{
-      toast.error("user logged out")
+      toast.error(`${user.displayName} logged out`)
+      localStorage.removeItem("AircncToken");
     })
   }
 
